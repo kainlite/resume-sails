@@ -24,9 +24,35 @@
     <hr />
     <h1>Experience</h1>
     <ul id="Work" class="list-unstyled">
+      <% _.each(Dashboard.work, function (frame) { %>
+        <li class="frame">
+          <section name="frame">
+            <div class="subtitle">
+              <strong><em><%- frame.title %></em> in <em><%- frame.institution %></em> - <%- frame.from %> -> <%- frame.to %></strong>
+            </div>
+            <br />
+            <blockquote>
+              <%- frame.description %>
+            </blockquote>
+          </section>
+        </li>
+      <% }) %>
     </ul>
     <h1>Study</h1>
     <ul id="Study" class="list-unstyled">
+      <% _.each(Dashboard.study, function (frame) { %>
+        <li class="frame">
+          <section name="frame">
+            <div class="subtitle">
+              <strong><em><%- frame.title %></em> in <em><%- frame.institution %></em> - <%- frame.from %> -> <%- frame.to %></strong>
+            </div>
+            <br />
+            <blockquote>
+              <%- frame.description %>
+            </blockquote>
+          </section>
+        </li>
+      <% }) %>
     </ul>
   </div>
 </div>
